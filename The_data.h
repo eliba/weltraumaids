@@ -45,6 +45,7 @@ class The_data {
 	public:
 		The_data();
 		void print();
+		void anonymize();
 		int get_id();
 		int get_plz();
 		std::string get_bday();

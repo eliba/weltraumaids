@@ -16,7 +16,6 @@
 #include <string>
 #include <time.h>
 #include "The_data.h"
-// main
 
 int main (int argc, char *argv[]) {
 	if (argc != 2) {
@@ -51,9 +50,6 @@ int main (int argc, char *argv[]) {
 	}
 
 	the_file.close();
-
-	
-
 
 	return 0;
 }
