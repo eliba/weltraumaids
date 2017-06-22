@@ -4,7 +4,6 @@
 #include <map>
 #include <string>
 #include <time.h>
-#include "The_data.h"
 
 // main
 
@@ -29,6 +28,14 @@ int main (int argc, char *argv[]) {
 		data.print();
 		mkay.push_back(data);
 	}
+
+	std::ofstream the_file;
+	the_file.open("export.csv");
+	the_file << "Test\n";
+	the_file.close();
+
+	
+
 
 	return 0;
 }
