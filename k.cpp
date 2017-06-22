@@ -3,6 +3,7 @@
 #include <fstream>
 #include <map>
 #include <string>
+#include <time.h>
 
 class The_data {
 	int id;
@@ -46,7 +47,12 @@ int The_data::gen_plz() {
 }
 
 std::string The_data::gen_birthday() {
-	return "fppo";
+	const time_t foo = rand();
+	struct tm *dt;
+	char buffer [30];
+	dt = localtime(&foo);
+	strftime(buffer, sizeof(buffer), "%Y-%m-%d", dt);
+	return std::string(buffer);
 }
 
 std::string The_data::gen_nationality() {
