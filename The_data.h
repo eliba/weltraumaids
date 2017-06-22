@@ -33,14 +33,6 @@ class The_data {
 	std::string gen_disease();
 
 	public:
-		The_data() {
-			id = get_new_id();
-			plz = gen_plz();
-			birthday = gen_birthday();
-			nationality = gen_nationality();
-			disease = gen_disease();
-			std::cout << "----- Test lol wtf yolo kay" << std::endl;
-		}
+		The_data();
 		void print();
-
 };

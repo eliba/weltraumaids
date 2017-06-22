@@ -1,5 +1,17 @@
 #include "The_data.h"
 
+int global_id = 0;
+
+The_data::The_data() {
+	id = global_id++;
+	plz = gen_plz();
+	birthday = gen_birthday();
+	nationality = gen_nationality();
+	disease = gen_disease();
+	std::cout << "----- Test lol wtf yolo kay" << std::endl;
+}
+
+
 int The_data::gen_plz() {
 	return (rand() % 99999);
 }

@@ -1,4 +1,4 @@
 compile:
-	clang++ -std=c++11 k.cpp -o keyannaamnananmanty
+	clang++ -std=c++11 k.cpp The_data.cpp -o keyannaamnananmanty
 clean:
 	rm -r 
