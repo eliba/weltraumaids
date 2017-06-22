@@ -36,4 +36,9 @@ class The_data {
 		The_data();
 		void print();
 		void anonymize();
+		int get_id();
+		int get_plz();
+		std::string get_bday();
+		std::string get_nation();
+		std::string get_disease();
 };

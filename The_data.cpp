@@ -26,16 +26,39 @@ std::string The_data::gen_birthday() {
 	return std::string(buffer);
 }
 
+int get_random_number() {
+	return 4; // chosen by fair dice roll.
+}				// guaranteed to be random.
+
 std::string The_data::gen_nationality() {
-	int nat = rand() % 6;
+	int nat = (rand() + get_random_number()) % 6;
 	return natmap[nat];
 }
 
 std::string The_data::gen_disease() {
-	int disease = rand() % 6;
+	int disease = (rand() + get_random_number()) % 6;
 	return dismap[disease];
 }
 
+int The_data::get_id () {
+	return id;
+}
+
+int The_data::get_plz() {
+	return plz;
+}
+
+std::string The_data::get_bday() {
+	return birthday;
+}
+		
+std::string The_data::get_nation() {
+	return nationality;
+}
+
+std::string The_data::get_disease() {
+	return disease;
+}
 void The_data::print() {
 	std::cout << "id: " << id << std::endl;
 	std::cout << "plz: " << plz << std::endl;
