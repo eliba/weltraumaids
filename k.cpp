@@ -4,6 +4,7 @@
 #include <map>
 #include <string>
 #include <time.h>
+#include <fstream>
 
 class The_data {
 	int id;
@@ -88,6 +89,14 @@ int main (int argc, char *argv[]) {
 		The_data data;
 		mkay.push_back(data);
 	}
+
+	std::ofstream the_file;
+	the_file.open("export.csv");
+	the_file << "Test\n";
+	the_file.close();
+
+	
+
 
 	return 0;
 }
