@@ -4,49 +4,20 @@
 #include <map>
 #include <string>
 #include <time.h>
+#include "The_data.h"
 
-class The_data {
-	int id;
-	int plz;
-	char birthday;
-	char nationality;
-	char disease;
-	
-	std::map<int, std::string> natmap = {
-		{0, "Angesteller der BRD GmbH"},
-		{1, "USA"}, 		// make america great again!
-		{2, "Mexicho"},		// and they gonna pay for it
-		{3, "China"},
-		{4, "Iceland"},
-		{5, "Finland"},
-		{6, "Sealand"}
-	};
-	std::map<int, std::string> dismap = {
-		{0, "T-Virus"},
-		{1, "Syphilis"},
-		{2, "Aids"},
-		{3, "Herpes"},
-		{4, "Weltraumaids"},
-		{5, "Kloeten am Arsch"},
-		{6, "Verwandt mit Trump"}
-	};
-	int gen_plz();
-	std::string gen_birthday();
-	std::string gen_nationality();
-	std::string gen_disease();
+int id_counter = 0;
 
-	public:
-		The_data() {
-			std::cout << "Test lol wtf yolo kay" << std::endl;
-		}
-
-};
+static int get_new_id() {
+	return id_counter++;
+}
 
 int The_data::gen_plz() {
 	return (rand() % 99999);
 }
 
 std::string The_data::gen_birthday() {
+	// https://stackoverflow.com/questions/14436462/c-time-stamp-to-human-readable-datetime-function
 	const time_t foo = rand();
 	struct tm *dt;
 	char buffer [30];
@@ -65,6 +36,13 @@ std::string The_data::gen_disease() {
 	return dismap[disease];
 }
 
+void The_data::print() {
+	std::cout << "id: " << id << std::endl;
+	std::cout << "plz: " << plz << std::endl;
+	std::cout << "birthday: " << birthday << std::endl;
+	std::cout << "nat: " << nationality << std::endl;
+	std::cout << "disease: " << disease << std::endl;
+}
 
 // main
 
@@ -86,6 +64,7 @@ int main (int argc, char *argv[]) {
 	
 	while(num--) {
 		The_data data;
+		data.print();
 		mkay.push_back(data);
 	}
 
