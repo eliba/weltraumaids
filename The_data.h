@@ -35,4 +35,9 @@ class The_data {
 	public:
 		The_data();
 		void print();
+		int get_id();
+		int get_plz();
+		std::string get_bday();
+		std::string get_nation();
+		std::string get_disease();
 };

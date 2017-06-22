@@ -23,15 +23,22 @@ int main (int argc, char *argv[]) {
 	
 	std::vector<The_data> mkay;
 	
+	std::ofstream the_file;	
+	the_file.open("export.csv");
+	
+	the_file << "ID,PLZ,BDAY,NATION,DISEASE\n";
 	while(num--) {
 		The_data data;
-		data.print();
-		mkay.push_back(data);
+		//data.print();
+		//mkay.push_back(data);
+		the_file << data.get_id() << ",";
+		the_file << data.get_plz() << ",";
+		the_file << data.get_bday() << ",";
+		the_file << data.get_nation() << ",";
+		the_file << data.get_disease();
+		the_file << "\n";
 	}
 
-	std::ofstream the_file;
-	the_file.open("export.csv");
-	the_file << "Test\n";
 	the_file.close();
 
 	
