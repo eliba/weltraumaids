@@ -4,8 +4,7 @@
 #include <map>
 #include <string>
 #include <time.h>
-
-// main
+#include "The_data.h"
 
 int main (int argc, char *argv[]) {
 	if (argc != 2) {
@@ -33,9 +32,6 @@ int main (int argc, char *argv[]) {
 	the_file.open("export.csv");
 	the_file << "Test\n";
 	the_file.close();
-
-	
-
 
 	return 0;
 }

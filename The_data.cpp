@@ -43,3 +43,10 @@ void The_data::print() {
 	std::cout << "nat: " << nationality << std::endl;
 	std::cout << "disease: " << disease << std::endl;
 }
+
+void The_data::anonymize() {
+	// anonymize plz
+	
+	// anonymize birthday
+	
+}

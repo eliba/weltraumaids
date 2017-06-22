@@ -35,4 +35,5 @@ class The_data {
 	public:
 		The_data();
 		void print();
+		void anonymize();
 };
