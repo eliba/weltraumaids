@@ -5,7 +5,7 @@
 class The_data {
 	int id;
 	int plz;
-	std::string birthday;
+	int birthday;
 	std::string nationality;
 	std::string disease;
 	
@@ -28,7 +28,7 @@ class The_data {
 		{6, "Verwandt mit Trump"}
 	};
 	int gen_plz();
-	std::string gen_birthday();
+	int gen_birthday();
 	std::string gen_nationality();
 	std::string gen_disease();
 

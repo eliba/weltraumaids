@@ -28,7 +28,7 @@ int main (int argc, char *argv[]) {
 	the_file << "ID,PLZ,BDAY,NATION,DISEASE\n";
 	while(num--) {
 		The_data data;
-		//data.print();
+		data.print();
 		//mkay.push_back(data);
 		the_file << data.get_id() << ",";
 		the_file << data.get_plz() << ",";
