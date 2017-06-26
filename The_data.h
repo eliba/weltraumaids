@@ -18,7 +18,12 @@ class The_data {
 	int birthday;
 	std::string nationality;
 	std::string disease;
+
+	int anon_plz;
+	int anon_bday;
+	std::string anon_nat;
 	
+
 	std::map<int, std::string> natmap = {
 		{0, "Angesteller der BRD GmbH"},
 		{1, "USA"}, 		// make america great again!

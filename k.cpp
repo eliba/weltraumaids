@@ -23,24 +23,25 @@ int main (int argc, char *argv[]) {
 		exit(1);	
 	}
 	
-	int num;
-	sscanf (argv[1],"%d",&num);
-	
-	if (num > 10000000) {
-		std::cout << "Are you shure? This is going to take a looong time. y/n" << std::endl;
-		exit(1);
+	long num;
+	sscanf (argv[1],"%ld",&num);
+
+		if (num > 10000000) {
+		std::cout << "This is going to take a looong time." << std::endl;
 	}
 	
-	std::vector<The_data> mkay;
+	//std::vector<The_data> mkay;
 	
 	std::ofstream the_file;	
 	the_file.open("export.csv");
-	
+	// generates the head	
 	the_file << "ID,PLZ,BDAY,NATION,DISEASE\n";
+	
 	while(num--) {
 		The_data data;
-		data.print();
+		//data.print();
 		//mkay.push_back(data);
+		data.anonymize();
 		the_file << data.get_id() << ",";
 		the_file << data.get_plz() << ",";
 		the_file << data.get_bday() << ",";
