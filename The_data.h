@@ -21,7 +21,7 @@ class The_data {
 
 	int anon_plz;
 	int anon_bday;
-	std::string anon_nat;
+	char anon_nat;
 	
 
 	std::map<int, std::string> natmap = {
@@ -56,4 +56,7 @@ class The_data {
 		std::string get_bday();
 		std::string get_nation();
 		std::string get_disease();
+		int get_anon_plz();
+		int get_anon_bday();
+		char get_anon_nat();
 };

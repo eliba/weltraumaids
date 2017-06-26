@@ -83,8 +83,7 @@ void The_data::print() {
 
 void The_data::anonymize() {
 	// anonymize plz
-	plz/=1000;
-	std::cout << plz << std::endl;
+	anon_plz = plz/1000;
 	// anonymize birthday
 	// ain't no duplicate
 	const time_t foo = birthday;
@@ -92,5 +91,20 @@ void The_data::anonymize() {
 	char buffer [30];
 	dt = localtime(&foo);
 	strftime(buffer, sizeof(buffer), "%Y", dt);
-	std::cout << std::string(buffer) << std::endl;
+	std::string::size_type sz;
+	anon_bday = std::stoi(buffer, &sz);
+	// anonymize nationality
+	anon_nat = nationality[0];
+}
+
+int The_data::get_anon_plz() {
+	return anon_plz;
+}
+
+int The_data::get_anon_bday() {
+	return anon_bday;
+}
+
+char The_data::get_anon_nat() {
+	return anon_nat;
 }
