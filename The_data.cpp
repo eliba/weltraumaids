@@ -92,7 +92,7 @@ void The_data::anonymize() {
 	dt = localtime(&foo);
 	strftime(buffer, sizeof(buffer), "%Y", dt);
 	std::string::size_type sz;
-	anon_bday = std::stoi(buffer, &sz);
+	anon_bday = (std::stoi(buffer, &sz)/10);
 	// anonymize nationality
 	anon_nat = nationality[0];
 }
